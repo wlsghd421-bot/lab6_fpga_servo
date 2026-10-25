@@ -1,0 +1,11 @@
+{
+    "sources": [
+        "src/button_onepulse.v",
+        "src/servo_ctrl.v",
+        "src/servo_position.v",
+        "src/servo_pwm.v",
+        "src/servo_top.v"
+    ],
+    "testbench": "sim/tb_servo.sv",
+    "simulation_top": "tb"
+}
