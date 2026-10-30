@@ -2,7 +2,7 @@
 // 버튼은 동기화·디바운스 후 한 클록 길이의 펄스로 전달합니다.
 module servo_position(
     input wire clk_50mhz,rst_p,left_pulse,right_pulse,
-    output reg [31:0] pulse_us
+    output reg [31:0] pulse_us = 32'd1500
 );
     always @(posedge clk_50mhz)
         if(rst_p) pulse_us<=1500;

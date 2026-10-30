@@ -5,8 +5,8 @@ module servo_pwm #(parameter CLK_HZ=50_000_000)(
     output wire servo
 );
     localparam FRAME_CYCLES=CLK_HZ/50; // 20 ms
-    reg [31:0] count;
-    reg [31:0] width_cycles;
+    reg [31:0] count = 0;
+    reg [31:0] width_cycles = (CLK_HZ/1000)*3/2;
     always @(posedge clk_50mhz) begin
         if(rst_p) begin count<=0; width_cycles<=(CLK_HZ/1000)*3/2; end
         else if(count==FRAME_CYCLES-1) begin
