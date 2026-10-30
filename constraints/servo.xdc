@@ -1,5 +1,6 @@
 # rst_p = KEY03(N4), left = KEY01(K4), right = KEY02(N8), servo = SERVO_CTRL(AA22)
 set_property PACKAGE_PIN B6 [get_ports clk_50mhz]
+# rst_p = KEY03(N4), left = KEY01(K4), right = KEY02(N8)
 set_property PACKAGE_PIN N4 [get_ports rst_p]
 set_property PACKAGE_PIN K4 [get_ports key_left]
 set_property PACKAGE_PIN N8 [get_ports key_right]
@@ -8,3 +9,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports *]
 create_clock -name clk_50mhz -period 20.000 [get_ports clk_50mhz]
 set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property PACKAGE_PIN L4 [get_ports {led[0]}]
+set_property PACKAGE_PIN M4 [get_ports {led[1]}]
+set_property PACKAGE_PIN M2 [get_ports {led[2]}]
+set_property PACKAGE_PIN N7 [get_ports {led[3]}]
